@@ -1,0 +1,31 @@
+@import "reset";
+@import "config";
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $font-family;
+    line-height: $line-height;
+    color: $color-font;
+    text-size-adjust: 100%;
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    body {
+        @include responsive-font($font-size-min, $font-size);
+        min-height: 100vh;
+        position: relative;
+    }
+}

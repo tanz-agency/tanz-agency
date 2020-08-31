@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import { Layout, SEO } from "src/components";
+import { Layout, Seo } from "components";
 
 const AboutPage = () => (
     <Layout>
-        <SEO title="About" />
+        <Seo title="About" />
         <h1>About</h1>
         <p>About us description</p>
         <Link to="/">Go back to the homepage</Link>

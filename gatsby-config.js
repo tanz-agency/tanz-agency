@@ -9,6 +9,7 @@ module.exports = {
     plugins: [
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-styled-components`,
+        `gatsby-plugin-sass`,
         `gatsby-plugin-typescript`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
@@ -16,6 +17,10 @@ module.exports = {
             resolve: "gatsby-plugin-root-import",
             options: {
                 src: path.join(__dirname, "src"),
+                components: path.join(__dirname, "src/components"),
+                pages: path.join(__dirname, "src/pages"),
+                styles: path.join(__dirname, "src/styles"),
+                images: path.join(__dirname, "src/images"),
             },
         },
         {
