@@ -26,6 +26,7 @@ export const StyledTeaserCopy = styled.div`
     }
 
     p {
+        color: ${({ theme }: StyledProps) => theme.palette.neutral4};
         margin-bottom: 20px;
     }
 `;
