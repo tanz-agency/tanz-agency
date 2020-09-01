@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { StyledProps } from "styles";
 
-export const StyledHero = styled.section`
+export const StyledTeaser = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,7 +12,7 @@ export const StyledHero = styled.section`
     }
 `;
 
-export const StyledHeroCopy = styled.div`
+export const StyledTeaserCopy = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -30,6 +30,6 @@ export const StyledHeroCopy = styled.div`
     }
 `;
 
-export const StyledImage = styled.div`
+export const StyledTeaserImage = styled.div`
     width: 500px;
 `;

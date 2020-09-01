@@ -4,7 +4,7 @@ export * from "./container";
 export * from "./image";
 export * from "./footer";
 export * from "./header";
-export * from "./hero";
+export * from "./teaser";
 export * from "./button";
 export * from "./button-group";
 export * from "./badge";

@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
                         <StyledLink to="/products" activeClassName="active">
                             Products
                         </StyledLink>
-                        <Button text="Get it" />
+                        <Button text="Hire us" />
                     </StyledNavigation>
                 </StyledWrapper>
             </Container>
