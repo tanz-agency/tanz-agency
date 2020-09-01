@@ -1,20 +1,20 @@
 import React from "react";
-import { StyledFooter } from "./styled";
+import { StyledFooter, StyledCopyright, StyledCategoryHeading, StyledCategoryElement } from "./styled";
 
 export const Footer: React.FC = () => {
     return (
         <StyledFooter>
-            © Tanz {new Date().getFullYear()}
+            <StyledCopyright>© Tanz {new Date().getFullYear()}</StyledCopyright>
             <div className="col">
-                <p>Tanz Sp z o.o.</p>
-                <p>ul. Produkcji 89</p>
-                <p>10-XXX Kraków, Poland</p>
-                <p>VAT-ID: PL32408XXX20</p>
-                <p>REGON: 32849123084</p>
+                <StyledCategoryHeading>Tanz Sp. z o.o.</StyledCategoryHeading>
+                <StyledCategoryElement>ul. Produkcji 89</StyledCategoryElement>
+                <StyledCategoryElement>10-XXX Kraków, Poland</StyledCategoryElement>
+                <StyledCategoryElement>VAT-ID: PL32408XXX20</StyledCategoryElement>
+                <StyledCategoryElement>REGON: 32849123084</StyledCategoryElement>
             </div>
             <div className="col">
-                <p>Contact</p>
-                <p>contact@tanz.agency</p>
+                <StyledCategoryHeading>Contact</StyledCategoryHeading>
+                <StyledCategoryElement>contact@tanz.agency</StyledCategoryElement>
             </div>
         </StyledFooter>
     );

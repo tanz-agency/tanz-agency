@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ title, description, primaryAction, s
     return (
         <StyledHero>
             <StyledHeroCopy>
-                <Badge text="available soon in our stores" />
+                <Badge text="available soon" />
                 <h1>{title}</h1>
                 <p>{description}</p>
                 <ButtonGroup>

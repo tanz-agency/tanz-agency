@@ -48,7 +48,7 @@ export const theme: ITheme = {
         neutral1: "#020302",
         neutral2: "#FFFFFF",
         neutral3: "#EEEEEE",
-        neutral4: "#BBBBBB",
+        neutral4: "#696969",
         accent1: "#EC8FFC",
     },
     fonts: {

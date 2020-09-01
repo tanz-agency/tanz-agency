@@ -8,7 +8,7 @@ const IndexPage = () => (
         <Seo title="Home" />
         <Hero
             title="Cutting boards made simple."
-            description="You don't need new features, you need our software in action."
+            description="Super cool software. For a super high price."
             primaryAction={
                 <Link to="/about">
                     <Button text="Check out" />

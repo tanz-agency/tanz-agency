@@ -21,14 +21,6 @@ $min-mobile: $min-420;
 $min-tablet: $min-720;
 $min-desktop: $min-1080;
 
-@function convertify($number) {
-    @if type-of($number) == "number" and unitless($number) {
-        @return percentage($number / $grid-column-count);
-    }
-
-    @return $number;
-}
-
 @mixin container() {
     flex-grow: 1;
 
@@ -76,15 +68,7 @@ $min-desktop: $min-1080;
     padding-left: $grid-gutter/2;
     padding-right: $grid-gutter/2;
 
-    width: convertify($width);
-}
-
-@mixin grid-offset-left($offset: 1) {
-    margin-left: convertify($offset);
-}
-
-@mixin grid-offset-right($offset: 1) {
-    margin-right: convertify($offset);
+    width: auto;
 }
 
 .container {

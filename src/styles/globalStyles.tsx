@@ -33,6 +33,10 @@ export const Base = createGlobalStyle`
 `;
 
 export const Typography = createGlobalStyle`
+  *::selection {
+    background: ${({ theme }: StyledProps) => theme.palette.neutral3};
+  }
+
   h1 {
       font-size: ${({ theme }: StyledProps) => theme.fontSizes.xll};
       font-weight: ${({ theme }: StyledProps) => theme.fontWeights.bold};
