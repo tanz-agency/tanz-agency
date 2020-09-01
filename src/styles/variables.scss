@@ -9,19 +9,6 @@ $grid-baseline: 16px;
 $page-width: 1290px;
 $page-limit: $page-width + ($container-gutter-desktop * 2);
 
-$font-family: "Inter", sans-serif;
-$font-heading: "Open Sans", sans-serif;
-$font-size: 16px;
-$font-size-min: 13px;
-$line-height: 1.5;
-
-$color-font: #333;
-$color-background: #fff;
-$color-placeholder: #ddd;
-
-$transition-enter: 200ms;
-$transition-leave: 500ms;
-
 $min-1800: 1800px;
 $min-1440: 1440px;
 $min-1280: 1280px;
@@ -60,8 +47,3 @@ $max-360: 359px;
 $min-mobile: $min-420;
 $min-tablet: $min-720;
 $min-desktop: $min-1080;
-
-$segment-padding-mobile: $gutter * 3;
-$segment-padding: 200px;
-
-$scale: ((920px, 0.975), (800px, 0.95), (690px, 0.925));

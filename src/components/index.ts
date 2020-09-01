@@ -6,3 +6,4 @@ export * from "./footer";
 export * from "./header";
 export * from "./hero";
 export * from "./button";
+export * from "./button-group";

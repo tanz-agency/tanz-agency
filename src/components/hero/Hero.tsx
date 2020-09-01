@@ -1,14 +1,24 @@
-import React from "react";
-import { Image, Button } from "components";
+import React, { ReactNode } from "react";
+import { Image, ButtonGroup } from "components";
 import { StyledHero, StyledHeroCopy, StyledImage } from "./styled";
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+    title?: string;
+    description?: string;
+    primaryAction?: ReactNode;
+    secondaryAction?: ReactNode;
+}
+
+export const Hero: React.FC<HeroProps> = ({ title, description, primaryAction, secondaryAction }: HeroProps) => {
     return (
         <StyledHero>
             <StyledHeroCopy>
-                <h1>Cut</h1>
-                <p>Let clients do the job.</p>
-                <Button text="Get it" />
+                <h1>{title}</h1>
+                <p>{description}</p>
+                <ButtonGroup>
+                    {primaryAction}
+                    {secondaryAction}
+                </ButtonGroup>
             </StyledHeroCopy>
             <StyledImage>
                 <Image />

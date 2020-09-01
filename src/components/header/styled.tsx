@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { StyledProps } from "styles";
 
 export const StyledHeader = styled.header`
     display: flex;
@@ -19,10 +20,21 @@ export const StyledWrapper = styled.div`
 export const StyledNavigation = styled.nav`
     display: flex;
     align-items: center;
+    gap: 30px;
 `;
 
 export const StyledLink = styled(Link)`
-    &.active {
-        color: #dddddd;
+    padding: 10px;
+    color: ${({ theme }: StyledProps) => theme.palette.black};
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus-within {
+        color: ${({ theme }: StyledProps) => theme.palette.grey};
+    }
+
+    &.active,
+    &:focus-within {
+        color: ${({ theme }: StyledProps) => theme.palette.grey};
     }
 `;

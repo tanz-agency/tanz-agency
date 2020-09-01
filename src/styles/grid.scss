@@ -6,15 +6,38 @@
     @return $number;
 }
 
-@mixin grid-row($direction: ltr, $align: stretch, $justify: flex-start, $grid-gutter: $gutter, $wrap: wrap) {
+@mixin container() {
+    flex-grow: 1;
+
+    margin: 0 auto;
+    padding-left: $container-gutter-mobile;
+    padding-right: $container-gutter-mobile;
+
+    max-width: $page-width + $container-gutter-mobile;
+
+    @media (min-width: $min-mobile) {
+        max-width: $page-width + $container-gutter-mobile * 2;
+    }
+
+    @media (min-width: $min-tablet) {
+        padding-left: $container-gutter-tablet;
+        padding-right: $container-gutter-tablet;
+        max-width: $page-width + $container-gutter-tablet * 2;
+    }
+
+    @media (min-width: $min-desktop) {
+        padding-left: $container-gutter-desktop;
+        padding-right: $container-gutter-desktop;
+        max-width: $page-width + $container-gutter-desktop * 2;
+    }
+}
+
+@mixin row($direction: ltr, $align: stretch, $justify: flex-start, $grid-gutter: $gutter, $wrap: wrap) {
     display: flex;
     flex-wrap: $wrap;
 
     align-items: $align;
     justify-content: $justify;
-
-    margin-left: -($grid-gutter/2);
-    margin-right: -($grid-gutter/2);
 
     @if $direction == ltr {
         flex-direction: row;
@@ -23,7 +46,7 @@
     }
 }
 
-@mixin grid-col($width: 100%, $align: stretch, $grid-gutter: $gutter) {
+@mixin col($width: 100%, $align: stretch, $grid-gutter: $gutter) {
     flex: none;
     align-self: $align;
 
@@ -46,9 +69,9 @@
 }
 
 .row {
-    @include grid-row();
+    @include row();
 }
 
 .col {
-    @include grid-col();
+    @include col();
 }

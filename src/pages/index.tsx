@@ -1,11 +1,25 @@
 import React from "react";
 
-import { Layout, Seo, Hero } from "components";
+import { Button, BUTTONS, Hero, Layout, Seo } from "components";
+import { Link } from "gatsby";
 
 const IndexPage = () => (
     <Layout>
         <Seo title="Home" />
-        <Hero />
+        <Hero
+            title="Cutting boards made simple."
+            description="You don't need new features, you need our software in action."
+            primaryAction={
+                <Link to="/about">
+                    <Button text="Check out" />
+                </Link>
+            }
+            secondaryAction={
+                <Link to="/products">
+                    <Button text="Remind me" variant={BUTTONS.SECONDARY} />
+                </Link>
+            }
+        />
     </Layout>
 );
 

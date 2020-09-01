@@ -24,7 +24,6 @@ html {
     }
 
     body {
-        @include responsive-font($font-size-min, $font-size);
         min-height: 100vh;
         position: relative;
     }

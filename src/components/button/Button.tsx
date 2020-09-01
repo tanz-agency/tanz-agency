@@ -1,11 +1,16 @@
 import React from "react";
-import { StyledButton } from "./styled";
+import { BUTTONS } from "./types";
+import { StyledPrimaryButton, StyledSecondaryButton } from "./styled";
 
 interface ButtonProps {
     text: string;
-    variant?: "primary" | "secondary";
+    variant?: BUTTONS;
 }
 
-export const Button: React.FC<ButtonProps> = ({ text, variant = "primary" }: ButtonProps) => {
-    return <StyledButton variant={variant}>{text}</StyledButton>;
+export const Button: React.FC<ButtonProps> = ({ text, variant = BUTTONS.PRIMARY }: ButtonProps) => {
+    if (variant === BUTTONS.SECONDARY) {
+        return <StyledSecondaryButton>{text}</StyledSecondaryButton>;
+    }
+
+    return <StyledPrimaryButton>{text}</StyledPrimaryButton>;
 };
