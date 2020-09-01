@@ -25,16 +25,16 @@ export const StyledNavigation = styled.nav`
 
 export const StyledLink = styled(Link)`
     padding: 10px;
-    color: ${({ theme }: StyledProps) => theme.palette.black};
+    color: ${({ theme }: StyledProps) => theme.palette.neutral1};
     transition: color 0.3s;
 
     &:hover,
     &:focus-within {
-        color: ${({ theme }: StyledProps) => theme.palette.grey};
+        color: ${({ theme }: StyledProps) => theme.palette.neutral3};
     }
 
     &.active,
     &:focus-within {
-        color: ${({ theme }: StyledProps) => theme.palette.grey};
+        color: ${({ theme }: StyledProps) => theme.palette.neutral3};
     }
 `;

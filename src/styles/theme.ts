@@ -1,9 +1,16 @@
 import { ThemedStyledProps } from "styled-components";
 
 interface IPalette {
-    black: string;
-    grey: string;
-    white: string;
+    neutral1?: string;
+    neutral2?: string;
+    neutral3?: string;
+    neutral4?: string;
+    accent1?: string;
+}
+
+interface IFonts {
+    base: string;
+    heading?: string;
 }
 
 interface IFontSizes {
@@ -30,6 +37,7 @@ interface IBreakpoints {
 
 export interface ITheme {
     palette: IPalette;
+    fonts: IFonts;
     fontSizes: IFontSizes;
     fontWeights: IFontWeights;
     breakpoints: IBreakpoints;
@@ -37,16 +45,21 @@ export interface ITheme {
 
 export const theme: ITheme = {
     palette: {
-        black: "#020302",
-        grey: "#EEEEEE",
-        white: "#FFFFFF",
+        neutral1: "#020302",
+        neutral2: "#FFFFFF",
+        neutral3: "#EEEEEE",
+        neutral4: "#BBBBBB",
+        accent1: "#EC8FFC",
+    },
+    fonts: {
+        base: "Inter, sans-serif",
     },
     fontSizes: {
         xs: "13px",
         s: "16px",
         m: "18px",
-        l: "20px",
-        xl: "32px",
+        l: "36px",
+        xl: "42px",
         xll: "64px",
     },
     fontWeights: {

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Image, ButtonGroup } from "components";
+import { Image, ButtonGroup, Badge } from "components";
 import { StyledHero, StyledHeroCopy, StyledImage } from "./styled";
 
 interface HeroProps {
@@ -13,6 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ title, description, primaryAction, s
     return (
         <StyledHero>
             <StyledHeroCopy>
+                <Badge text="available soon in our stores" />
                 <h1>{title}</h1>
                 <p>{description}</p>
                 <ButtonGroup>

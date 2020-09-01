@@ -1,3 +1,26 @@
+$gutter: 30px;
+$container-gutter-mobile: $gutter;
+$container-gutter-tablet: 50px;
+$container-gutter-desktop: 70px;
+
+$grid-column-count: 12;
+$grid-baseline: 16px;
+
+$page-width: 1290px;
+$page-limit: $page-width + ($container-gutter-desktop * 2);
+
+$min-1080: 1080px;
+$min-720: 720px;
+$min-420: 420px;
+
+$max-1080: 1079px;
+$max-720: 719px;
+$max-420: 419px;
+
+$min-mobile: $min-420;
+$min-tablet: $min-720;
+$min-desktop: $min-1080;
+
 @function convertify($number) {
     @if type-of($number) == "number" and unitless($number) {
         @return percentage($number / $grid-column-count);
