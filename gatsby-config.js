@@ -14,13 +14,20 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
-            resolve: "gatsby-plugin-root-import",
+            resolve: `gatsby-plugin-i18n`,
             options: {
-                src: path.join(__dirname, "src"),
-                components: path.join(__dirname, "src/components"),
-                pages: path.join(__dirname, "src/pages"),
-                styles: path.join(__dirname, "src/styles"),
-                images: path.join(__dirname, "src/images"),
+                langKeyDefault: `en`,
+                useLangKeyLayout: false,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-root-import`,
+            options: {
+                src: path.join(__dirname, `src`),
+                components: path.join(__dirname, `src/components`),
+                pages: path.join(__dirname, `src/pages`),
+                styles: path.join(__dirname, `src/styles`),
+                images: path.join(__dirname, `src/images`),
             },
         },
         {
